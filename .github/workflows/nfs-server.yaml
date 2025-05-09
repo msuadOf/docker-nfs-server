@@ -27,4 +27,4 @@ jobs:
           username: "${{github.actor}}"
           password: "${{secrets.GITHUB_TOKEN}}"
       - name: "Push the image to the repository"
-        run: "docker image push ghcr.io/msuadOf/nfs-server"
+        run: "docker image push ghcr.io/msuadof/nfs-server"
