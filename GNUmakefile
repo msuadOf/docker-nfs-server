@@ -1,4 +1,4 @@
-REPOSITORY = ghcr.io/normal-computing
+REPOSITORY = ghcr.io/msuadOf
 IMAGE = $(REPOSITORY)/nfs-server
 
 all: image
