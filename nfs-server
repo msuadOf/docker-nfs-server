@@ -4,7 +4,7 @@ set -eu
 set -o pipefail
 
 allowed_clients=$NFS_SERVER_ALLOWED_CLIENTS
-export_options="rw,sync,no_root_squash,no_subtree_check,fsid=0,insecure"
+export_options="rw,sync,no_root_squash,no_subtree_check,fsid=0,insecure,no_hide"
 
 data_dir=/mnt/data
 if [ ! -d "$data_dir" ]; then
