@@ -1,4 +1,4 @@
-REPOSITORY = ghcr.io/msuadOf
+REPOSITORY = ghcr.io/msuadof
 IMAGE = $(REPOSITORY)/nfs-server
 
 all: image
