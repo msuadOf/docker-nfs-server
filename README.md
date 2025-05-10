@@ -15,6 +15,25 @@ For example:
     docker run --privileged -v <directory>:/mnt/data:rw -p 2049:2049 \
            ghcr.io/normal-computing/nfs-server:latest
 ```
+and for docker compose,
+```
+version: "3.8"
+services:
+  nfs4:
+    image: ghcr.io/msuadof/nfs-server:latest
+    # Required to load kernel NFS module
+    privileged: true
+    environment:
+      - NFS_SERVER_DEBUG=1
+      - NFS_SERVER_ALLOWED_CLIENTS=*
+    volumes:
+      # You must provide an exports config file
+      - /store/alist:/mnt/data:shared
+    ports:
+      - 2049:2049/tcp
+      - 2049:2049/udp
+networks: {}
+```
 
 where `<directory>` is the path of the directory you want to serve.
 
